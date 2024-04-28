@@ -9,6 +9,3 @@ app.include_router(usuarios_router, tags=["usuarios"], prefix="/usuarios")
 @app.on_event("shutdown")
 def shutdown_db_client():
     client.close()
-
-
-
