@@ -4,6 +4,7 @@ from controller.usuarioCRUD import router as usuarios_router
 
 
 app = FastAPI()
+
 app.include_router(usuarios_router, tags=["usuarios"], prefix="/usuarios")
 # MongoDB connection URL
 @app.on_event("shutdown")
